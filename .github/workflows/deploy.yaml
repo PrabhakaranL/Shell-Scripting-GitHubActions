@@ -19,7 +19,6 @@ jobs:
           ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
 
       - name: Copy script to server
-        run: scp -o StrictHostKeyChecking=no ./deploy.sh ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_IP }}:/home/${{ secrets.SERVER_USER }}/deploy.sh
-
+        run: scp -o StrictHostKeyChecking=no ./Shellscript-demo.sh ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_IP }}:/home/${{ secrets.SERVER_USER }}/deploy
       - name: Execute script on server
         run: ssh -o StrictHostKeyChecking=no ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_IP }} "bash /home/${{ secrets.SERVER_USER }}/deploy.sh"
