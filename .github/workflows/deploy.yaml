@@ -21,4 +21,4 @@ jobs:
       - name: Copy script to server
         run: scp -o StrictHostKeyChecking=no ./Shellscript-demo.sh ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_IP }}:/home/${{ secrets.SERVER_USER }}/deploy
       - name: Execute script on server
-        run: ssh -o StrictHostKeyChecking=no ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_IP }} "bash /home/${{ secrets.SERVER_USER }}/deploy.sh"
+        run: ssh -o StrictHostKeyChecking=no ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_IP }} "bash /home/${{ secrets.SERVER_USER }}/Shellscript-demo.sh"
