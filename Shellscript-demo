@@ -1,0 +1,6 @@
+#!/bin/bash
+echo "Starting deployment on Ubuntu..."
+cd /home/user
+# Example commands
+sudo apt update && sudo apt upgrade -y
+echo "Deployment finished!"
